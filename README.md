@@ -1,3 +1,5 @@
+![A SPAR assembly program multiplying a matrix by a vector, reducing, and adding a vector](.github/banner.svg)
+
 # tree-sitter-spar
 
 A [tree-sitter](https://tree-sitter.github.io/) grammar for SPAR assembly
