@@ -1,0 +1,103 @@
+====================
+Map Definition
+====================
+
+#tile = MAP<d0, d1 -> d0 + d1>
+
+----
+
+(program
+  (map_definition
+    name: (identifier)
+    (map_keyword)
+    params: (dims_list
+      (dim_or_sym)
+      (dim_or_sym))
+    body: (affine_expr
+      (add_expr
+        (mul_expr
+          (unary_expr
+            (primary_expr
+              (dim_or_sym))))
+        (mul_expr
+          (unary_expr
+            (primary_expr
+              (dim_or_sym))))))))
+
+====================
+Binding Statement Min
+====================
+
+lb = MIN #tile(d0, 0)
+
+----
+
+(program
+  (binding_statement
+    name: (identifier)
+    extrema: (min_keyword)
+    map_ref: (identifier)
+    args: (affine_expr
+      (add_expr
+        (mul_expr
+          (unary_expr
+            (primary_expr
+              (dim_or_sym))))))
+    args: (affine_expr
+      (add_expr
+        (mul_expr
+          (unary_expr
+            (primary_expr
+              (number))))))))
+
+====================
+Binding Statement Max
+====================
+
+ub = MAX #tile(d0, 0)
+
+----
+
+(program
+  (binding_statement
+    name: (identifier)
+    extrema: (max_keyword)
+    map_ref: (identifier)
+    args: (affine_expr
+      (add_expr
+        (mul_expr
+          (unary_expr
+            (primary_expr
+              (dim_or_sym))))))
+    args: (affine_expr
+      (add_expr
+        (mul_expr
+          (unary_expr
+            (primary_expr
+              (number))))))))
+
+==============================
+Multiline List
+==============================
+
+x = vector<3> [1,
+               2,
+               3]
+
+----
+
+(program
+  (definition
+    name: (identifier)
+    value: (data_value
+      (tensor_literal
+        (tensor_type
+          (named_type
+            (vector_keyword))
+          (shape
+            (dimension
+              (number))))
+        (list
+          (number)
+          (number)
+          (number))))))

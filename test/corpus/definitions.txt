@@ -1,0 +1,43 @@
+==================
+Definition
+==================
+
+x = vector<3> 
+
+----
+
+(program
+  (definition
+    (identifier)
+    (data_value
+      (tensor_type
+        (named_type
+          (vector_keyword))
+        (shape
+          (dimension
+            (number)))))))
+
+=====================
+Definition With Value
+=====================
+
+x = vector<3> [ 0.1, 0.2, -0.3 ]
+
+----
+
+(program
+  (definition
+    (identifier)
+    (data_value
+      (tensor_literal
+        (tensor_type
+          (named_type
+            (vector_keyword))
+          (shape
+            (dimension
+              (number))))
+        (list
+          (number)
+          (number)
+          (number))))))
+        

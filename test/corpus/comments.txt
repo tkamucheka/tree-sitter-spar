@@ -1,0 +1,11 @@
+=========
+Comments
+=========
+
+; This is a comment
+
+---
+
+(program
+  (comment))
+

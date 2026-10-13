@@ -1,0 +1,20 @@
+# Build artifacts of the C, Rust, Node, Python, Go, and Swift bindings
+build/
+target/
+node_modules/
+prebuilds/
+.build/
+*.egg-info/
+__pycache__/
+*.o
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.pc
+*.wasm
+*.tar.gz
+*.tgz
+*.zip
+Cargo.lock
